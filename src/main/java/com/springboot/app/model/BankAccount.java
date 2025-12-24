@@ -1,4 +1,7 @@
-package org.example.app;
+package com.springboot.app.model;
+
+import org.springframework.stereotype.Component;
+
 
 public class BankAccount {
     private String name;

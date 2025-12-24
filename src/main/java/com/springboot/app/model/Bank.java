@@ -1,18 +1,19 @@
-package org.example.app;
+package com.springboot.app.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
-public class BankService {
+public class Bank {
 
     private final List<BankAccount> bankAccounts;
     private final int ACCOUNT_NUMBER_START = 10000000;
     private int nextAccountID = ACCOUNT_NUMBER_START;
     private  double bankTotalBalance;
 
-    BankService(List<BankAccount> bankAccounts) {
+    Bank(List<BankAccount> bankAccounts) {
         bankAccounts.add(new BankAccount("Joe Smith", nextAccountID++, 100.00));
         bankAccounts.add(new BankAccount("Jan Clark", nextAccountID++, 250.00));
         this.bankAccounts = bankAccounts;
